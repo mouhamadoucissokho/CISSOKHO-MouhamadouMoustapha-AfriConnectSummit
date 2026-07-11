@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriConnect Summit 2026 | Inscription & Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="index.html" class="logo"><span class="logo-accent">AfriConnect</span> Summit '26</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="programme.html" class="nav-link">Programme</a></li>
+                <li class="nav-item"><a href="intervenants.html" class="nav-link">Intervenants</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Inscription</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="btn-theme" aria-label="Changer le thème"><i class="bi bi-moon-fill"></i></button>
+                <button id="hamburger" class="hamburger" aria-label="Menu mobile"><i class="bi bi-list"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <a href="index.html">Accueil</a> &gt; <span>Contact & Inscription</span>
+                </nav>
+                <h1>Rejoignez l'Événement</h1>
+            </div>
+        </section>
+
+        <!-- FORMULAIRE + INFOS -->
+        <section class="contact-section section-padding">
+            <div class="container flex-contact">
+                <!-- Formulaire -->
+                <div class="contact-form-container">
+                    <h2>Formulaire d'inscription</h2>
+                    <form id="registration-form" novalidate>
+                        <div class="form-group">
+                            <label for="fullname">Nom complet *</label>
+                            <input type="text" id="fullname" name="fullname" required placeholder="Awa Diop">
+                            <span class="error-msg" id="fullname-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="awa.diop@exemple.com">
+                            <span class="error-msg" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+221 77 000 00 00">
+                            <span class="error-msg" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="participation-type">Type de participation *</label>
+                            <select id="participation-type" name="participation-type" required>
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="presentiel">En présentiel à Dakar</option>
+                                <option value="en-ligne">En ligne (Virtuel)</option>
+                                <option value="vip">Pass VIP Access</option>
+                            </select>
+                            <span class="error-msg" id="type-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Pays africain *</label>
+                            <select id="country" name="country" required>
+                                <option value="">-- Sélectionnez un pays --</option>
+                                <option value="Sénégal">Sénégal</option>
+                                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                <option value="Cameroun">Cameroun</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Maroc">Maroc</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Togo">Togo</option>
+                            </select>
+                            <span class="error-msg" id="country-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message / Motivations *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Expliquez en quelques mots vos attentes (min. 20 caractères)..."></textarea>
+                            <span class="error-msg" id="message-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Valider mon inscription</button>
+                        <div id="form-success" class="success-message"></div>
+                    </form>
+                </div>
+
+                <!-- Informations additionnelles -->
+                <div class="contact-info">
+                    <h2>Lieu & Informations</h2>
+                    <div class="info-card">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div>
+                            <h4>Adresse du Sommet</h4>
+                            <p>Centre International de Conférences Abdou Diouf (CICAD), Dakar, Sénégal</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                            <h4>Contact direct</h4>
+                            <p>contact@africonnectsummit.com</p>
+                        </div>
+                    </div>
+                    <!-- Carte Google Maps -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.914283120108!2d-17.181363024892!3d14.717208985780516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10cc52c9330ed%3A0x8eef5868bd3df55d!2sCICAD!5e0!3m2!1sfr!2ssn!4v1710000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCORDÉON FAQ (CSS PUR) -->
+        <section class="faq-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+                <div class="accordion">
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq1" class="accordion-toggle">
+                        <label for="faq1" class="accordion-header">
+                            <span>L'événement est-il accessible gratuitement en ligne ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <p>Oui, l'accès au live streaming de toutes les conférences principales est entièrement gratuit sur inscription.</p>
+                        </div>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq2" class="accordion-toggle">
+                        <label for="faq2" class="accordion-header">
+                            <span>Comment obtenir une attestation de participation ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <p>Une attestation numérique vous sera envoyée par email à la fin des 3 jours si vous avez assisté aux sessions.</p>
+                        </div>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq3" class="accordion-toggle">
+                        <label for="faq3" class="accordion-header">
+                            <span>Où se déroulent les ateliers pratiques ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <p>Les workshops se déroulent en présentiel dans les salles annexes du CICAD et en salles virtuelles interactives.</p>
+                        </div>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq4" class="accordion-toggle">
+                        <label for="faq4" class="accordion-header">
+                            <span>Puis-je modifier mon type de participation plus tard ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <p>Oui, vous pouvez contacter le support par email au moins 48 heures avant le début de l'événement.</p>
+                        </div>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="faq5" class="accordion-toggle">
+                        <label for="faq5" class="accordion-header">
+                            <span>Existe-t-il un tarif étudiant pour le Pass VIP ?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <p>Absolument, un tarif réduit de 50% est accordé sur présentation de votre carte d'étudiant en cours de validité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container flex-footer">
+            <div class="footer-col"><a href="index.html" class="logo">AfriConnect Summit</a><p>Le rdv annuel de l'excellence tech.</p></div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul><li><a href="index.html">Accueil</a></li><li><a href="programme.html">Programme</a></li><li><a href="intervenants.html">Intervenants</a></li><li><a href="contact.html">Inscription</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links"><a href="#"><i class="bi bi-linkedin"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="back-to-top" class="btn-top" aria-label="Retour en haut"><i class="bi bi-arrow-up-short"></i></button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
