@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AfriConnect Summit 2026 | Accueil</title>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts : Orbitron (Tech/Titres) & Inter (Lecture) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Remixicon pour les icônes -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Bootstrap Icons pour les icônes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   
-  <!-- Mon fichier CSS personnel -->
+  <!-- Feuille de style CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- HEADER & NAVIGATION -->
-  <header class="header">
-    <nav class="navbar">
-      <a href="index.html" class="logo">AfriConnect <span class="logo-accent">Summit</span></a>
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <i class="bi bi-globe2"></i> AfriConnect <span class="logo-accent">Summit</span>
+      </a>
       
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link active">Accueil</a></li>
@@ -31,95 +33,160 @@
       </ul>
       
       <div class="nav-actions">
+        <a href="contact.html" class="btn btn-blue">Rejoindre AfriConnect</a>
         <button id="theme-toggle" class="btn-theme" aria-label="Changer de thème">
-          <i class="ri-moon-line"></i>
+          <i class="bi bi-sun"></i>
         </button>
         <button id="hamburger" class="hamburger" aria-label="Menu mobile">
-          <i class="ri-menu-line"></i>
+          <i class="bi bi-list"></i>
         </button>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- SECTION HERO -->
     <section class="hero">
-      <div class="hero-content container">
-        <span class="badge">Le Rendez-vous Tech Majeur de 2026</span>
-        <h1>L'Avenir de la Tech Africaine se Construite Ici</h1>
-        <p class="hero-subtitle">Rejoignez plus de 1 500 passionnés, leaders du secteur et innovateurs pour 3 jours d'échanges, d'ateliers et de networking d'exception.</p>
-        
-        <!-- Compte à rebours -->
-        <div class="countdown" id="countdown">
-          <div class="time-box"><span id="days">00</span><label>Jours</label></div>
-          <div class="time-box"><span id="hours">00</span><label>Heures</label></div>
-          <div class="time-box"><span id="minutes">00</span><label>Minutes</label></div>
-          <div class="time-box"><span id="seconds">00</span><label>Secondes</label></div>
+      <div class="hero-flex container">
+        <div class="hero-image reveal">
+          <img src="Images/photo.png" alt="Illustration réseau connecté AfriConnect Summit">
         </div>
-        
-        <div class="hero-buttons">
-          <a href="contact.html" class="btn btn-primary">Réserver ma place</a>
-          <a href="programme.html" class="btn btn-secondary">Découvrir le programme</a>
+
+        <div class="hero-content reveal">
+          <span class="badge">Le Rendez-vous Tech Majeur de 2026</span>
+          <h1>L'Avenir de la Tech Africaine se Construit Ici</h1>
+          <p class="hero-subtitle">Du 15 au 17 Octobre 2026 · Centre de Conférences, Dakar, Sénégal. AfriConnect connecte les leaders tech, développeurs et entreprises du monde entier pour façonner l'innovation.</p>
+          
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-cyan">Réserver ma place</a>
+            <a href="programme.html" class="btn btn-outline">Découvrir le programme</a>
+          </div>
+
+          <!-- Compte à rebours -->
+          <div class="countdown" id="countdown">
+            <div class="time-box"><span id="days">00</span><label>Jours</label></div>
+            <div class="time-box"><span id="hours">00</span><label>Heures</label></div>
+            <div class="time-box"><span id="minutes">00</span><label>Minutes</label></div>
+            <div class="time-box"><span id="seconds">00</span><label>Secondes</label></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- STATISTIQUES EN GRID -->
+    <!-- SECTION CHIFFRES CLÉS -->
     <section class="section-padding">
       <div class="container">
+        <h2 class="section-title">AfriConnect en Chiffres</h2>
         <div class="grid-stats">
-          <div class="stat-card">
-            <h3 class="stat-number">1 500+</h3>
-            <p class="stat-label">Participants attendus</p>
+          <div class="stat-card reveal">
+            <h3 class="stat-number" data-target="1200">0</h3>
+            <p class="stat-label">Participants</p>
           </div>
-          <div class="stat-card">
-            <h3 class="stat-number">40+</h3>
-            <p class="stat-label">Speakers d'élite</p>
+          <div class="stat-card reveal">
+            <h3 class="stat-number" data-target="48">0</h3>
+            <p class="stat-label">Intervenants</p>
           </div>
-          <div class="stat-card">
-            <h3 class="stat-number">3</h3>
-            <p class="stat-label">Jours d'immersion</p>
+          <div class="stat-card reveal">
+            <h3 class="stat-number" data-target="3">0</h3>
+            <p class="stat-label">Jours</p>
           </div>
-          <div class="stat-card">
-            <h3 class="stat-number">25</h3>
-            <p class="stat-label">Pays représentés</p>
+          <div class="stat-card reveal">
+            <h3 class="stat-number" data-target="12">0</h3>
+            <p class="stat-label">Pays</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION POURQUOI PARTICIPER -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="section-title">Pourquoi Participer ?</h2>
+        <div class="why-flex">
+          <article class="why-card reveal">
+            <i class="bi bi-people-fill why-icon"></i>
+            <h3>Networking de Qualité</h3>
+            <p>Rencontrez plus de 1200 professionnels, entrepreneurs et investisseurs venus de tout le continent.</p>
+          </article>
+          <article class="why-card reveal">
+            <i class="bi bi-lightbulb-fill why-icon"></i>
+            <h3>Contenu Inspirant</h3>
+            <p>Assistez à des conférences animées par 48 experts sur l'IA, la FinTech et la cybersécurité.</p>
+          </article>
+          <article class="why-card reveal">
+            <i class="bi bi-graph-up-arrow why-icon"></i>
+            <h3>Opportunités Business</h3>
+            <p>Développez votre réseau et trouvez des partenaires pour accélérer la croissance de votre projet.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- APERÇU INTERVENANTS -->
-    <section class="section-padding" style="background-color: var(--bg-secondary);">
+    <section class="section-padding">
       <div class="container">
         <h2 class="section-title">Speakers à la Une</h2>
         <div class="grid-speakers-preview">
-          <div class="speaker-card">
-            <img src="Images/speaker1.jpg" alt="Awa Diop" class="speaker-img" onerror="this.src='https://via.placeholder.com/120'">
-            <h3>Awa Diop</h3>
+          <div class="speaker-card reveal">
+            <img src="Images/F2.png" alt="Awa Diop, VP Artificial Intelligence" class="speaker-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400'">
+            <h3>Amina Traoré</h3>
             <p class="speaker-role">VP Artificial Intelligence</p>
-            <span class="speaker-country">🇸🇳 Sénégal</span>
+            <span class="speaker-country">Sénégal</span>
           </div>
-          <div class="speaker-card">
-            <img src="Images/speaker2.jpg" alt="Kwame Mensah" class="speaker-img" onerror="this.src='https://via.placeholder.com/120'">
+          <div class="speaker-card reveal">
+            <img src="Images/N1.png" alt="Kwame Mensah, Fondateur FinTech Africa" class="speaker-img" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400'">
             <h3>Kwame Mensah</h3>
             <p class="speaker-role">Fondateur FinTech Africa</p>
-            <span class="speaker-country">🇬🇭 Ghana</span>
+            <span class="speaker-country">Ghana</span>
           </div>
-          <div class="speaker-card">
-            <img src="Images/speaker3.jpg" alt="Fatou Sow" class="speaker-img" onerror="this.src='https://via.placeholder.com/120'">
+          <div class="speaker-card reveal">
+            <img src="Images/F1.png" alt="Fatou Sow, Expert Cybersecurity & Cloud" class="speaker-img" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400'">
             <h3>Fatou Sow</h3>
             <p class="speaker-role">Expert Cybersecurity & Cloud</p>
-            <span class="speaker-country">🇨🇮 Côte d'Ivoire</span>
+            <span class="speaker-country">Côte d'Ivoire</span>
           </div>
-          <div class="speaker-card">
-            <img src="Images/speaker4.jpg" alt="David Osei" class="speaker-img" onerror="this.src='https://via.placeholder.com/120'">
-            <h3>David Osei</h3>
-            <p class="speaker-role">Lead Developer & CTO</p>
-            <span class="speaker-country">🇰🇪 Kenya</span>
+          <div class="speaker-card reveal">
+            <img src="Images/KE2.png" alt="Samuel Kimani, Lead Data Scientist" class="speaker-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400'">
+            <h3>Samuel Kimani</h3>
+            <p class="speaker-role">Lead Data Scientist</p>
+            <span class="speaker-country">Kenya</span>
           </div>
         </div>
         <div class="center-btn">
-          <a href="intervenants.html" class="btn btn-secondary">Voir tous les intervenants</a>
+          <a href="intervenants.html" class="btn btn-outline">Voir tous les intervenants</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION SPONSORS -->
+    <section class="section-padding" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="section-title">Nos Sponsors</h2>
+        <div class="sponsors-flex">
+          <div class="sponsor-card sponsor-gold reveal">
+            <span class="sponsor-level">Or</span>
+            <p class="sponsor-name">TechAfrica Corp</p>
+          </div>
+          <div class="sponsor-card sponsor-silver reveal">
+            <span class="sponsor-level">Argent</span>
+            <p class="sponsor-name">PayNaija</p>
+          </div>
+          <div class="sponsor-card sponsor-silver reveal">
+            <span class="sponsor-level">Argent</span>
+            <p class="sponsor-name">CloudSN</p>
+          </div>
+          <div class="sponsor-card sponsor-bronze reveal">
+            <span class="sponsor-level">Bronze</span>
+            <p class="sponsor-name">DevHub</p>
+          </div>
+          <div class="sponsor-card sponsor-bronze reveal">
+            <span class="sponsor-level">Bronze</span>
+            <p class="sponsor-name">StartUp228</p>
+          </div>
+          <div class="sponsor-card sponsor-bronze reveal">
+            <span class="sponsor-level">Bronze</span>
+            <p class="sponsor-name">CoWork Dakar</p>
+          </div>
         </div>
       </div>
     </section>
@@ -145,18 +212,19 @@
         <div class="footer-col">
           <h4>Suivez-nous</h4>
           <div class="social-links">
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-            <a href="#"><i class="ri-github-fill"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 AfriConnect Summit. Tous droits réservés.</p>
-        <button id="back-to-top" class="btn-top" aria-label="Retour en haut"><i class="ri-arrow-up-line"></i></button>
+        <p>&copy; <span id="current-year"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <button id="back-to-top" class="btn-top" aria-label="Retour en haut"><i class="bi bi-arrow-up"></i></button>
       </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
